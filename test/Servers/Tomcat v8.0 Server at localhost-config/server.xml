@@ -124,7 +124,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="Family School Connection" path="/Family_School_Connection" reloadable="true" source="org.eclipse.jst.jee.server:Family School Connection"/><Context docBase="StudentInfoManage" path="/StudentInfoManage" reloadable="true" source="org.eclipse.jst.jee.server:StudentInfoManage"/><Context docBase="springmvc01" path="/springmvc01" reloadable="true" source="org.eclipse.jst.jee.server:springmvc01"/><Context docBase="springmvc02" path="/springmvc02" reloadable="true" source="org.eclipse.jst.jee.server:springmvc02"/><Context docBase="springMVC" path="/springMVC" reloadable="true" source="org.eclipse.jst.jee.server:springMVC"/></Host>
+      <Context docBase="Family School Connection" path="/Family_School_Connection" reloadable="true" source="org.eclipse.jst.jee.server:Family School Connection"/><Context docBase="StudentInfoManage" path="/StudentInfoManage" reloadable="true" source="org.eclipse.jst.jee.server:StudentInfoManage"/><Context docBase="springmvc01" path="/springmvc01" reloadable="true" source="org.eclipse.jst.jee.server:springmvc01"/><Context docBase="springmvc02" path="/springmvc02" reloadable="true" source="org.eclipse.jst.jee.server:springmvc02"/><Context docBase="springMVC" path="/springMVC" reloadable="true" source="org.eclipse.jst.jee.server:springMVC"/><Context docBase="springmvc03" path="/springmvc03" reloadable="true" source="org.eclipse.jst.jee.server:springmvc03"/></Host>
     </Engine>
   </Service>
 </Server>

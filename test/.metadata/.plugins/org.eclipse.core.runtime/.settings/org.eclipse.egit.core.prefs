@@ -1,5 +1,5 @@
-GitRepositoriesView.GitDirectories=E\:\\struts\\HelloWorld\\.git;
-GitRepositoriesView.GitDirectories.relative=E\:\\struts\\HelloWorld\\.git;
+GitRepositoriesView.GitDirectories=F\:\\git\\project\\.git;E\:\\struts\\HelloWorld\\.git;
+GitRepositoriesView.GitDirectories.relative=F\:\\git\\project\\.git;E\:\\struts\\HelloWorld\\.git;
 TerminalPrefInvertColors=true
 eclipse.preferences.version=1
 overriddenByCSS=,TerminalPrefInvertColors,

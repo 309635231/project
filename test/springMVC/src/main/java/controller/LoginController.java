@@ -2,6 +2,8 @@ package controller;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import javax.websocket.Session;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,7 +23,7 @@ public class LoginController {
 	}
 	
 	@RequestMapping("/login.do")
-	public String login(HttpServletRequest request){
+	public String login(HttpServletRequest request,HttpSession session){
 		System.out.println("login()");
 		String username=request.getParameter("username");
 		String pwd=request.getParameter("pwd");
@@ -29,7 +31,7 @@ public class LoginController {
 		request.setAttribute("user", username);
 		try {
 			Admin admin=service.checkLogin(username, pwd);
-
+			session.setAttribute("admin", admin);
 		} catch (Exception e) {
 			e.printStackTrace();
 			if(e instanceof ApplicationException){
