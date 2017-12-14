@@ -1,0 +1,14 @@
+package service;
+
+import dao.AdminDAO;
+import entity.Admin;
+
+public class LoginServiceImpl implements LoginService{
+	
+	private AdminDAO dao;
+	public Admin checkLogin(String username,String pwd){
+		
+		return null;
+	}
+
+}

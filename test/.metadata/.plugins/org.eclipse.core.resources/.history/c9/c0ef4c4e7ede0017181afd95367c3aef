@@ -1,0 +1,10 @@
+package annotation;
+
+public class Bar {
+	private Waiter wt;
+
+	public Bar() {
+		System.out.println("Bar()");
+	}
+	
+}

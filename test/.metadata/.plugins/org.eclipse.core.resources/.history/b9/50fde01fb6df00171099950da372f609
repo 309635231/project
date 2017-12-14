@@ -1,0 +1,5 @@
+package com.tarena.netcoss.controller;
+
+public class LoginController {
+
+}

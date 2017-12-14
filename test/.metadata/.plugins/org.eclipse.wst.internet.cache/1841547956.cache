@@ -1,0 +1,36 @@
+
+<HTML>
+<HEAD>
+<TITLE> Auth Login </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT">
+
+<SCRIPT LANGUAGE="JavaScript">
+
+function GetRandomNum(Min,Max)
+{   
+var Range = Max - Min;   
+var Rand = Math.random();   
+return(Min + Math.round(Rand * Range));   
+}   
+var num = GetRandomNum(100000,1000000);   
+
+var url=window.location.href+"";
+var len = url.length;
+
+if(len>128){
+	url=url.substr(0,128);
+}
+        window.location.href="http://1.1.1.1:8000/ext_portal.magi?url="+url+"&radnum="+num+"&a.magi"; 
+	</SCRIPT>
+	</HEAD>
+	<body>
+	
+	</body>
+	</html>

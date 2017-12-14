@@ -1,0 +1,20 @@
+package controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+
+public class BmiController {
+	@RequestMapping("/toBmi.do")
+	public String toBmi(){
+		return "bmi_form";
+	}
+	@RequestMapping("/bmi.do")
+	public String bmi(Bmi bmi,HttpServletRequest request){
+		String weight = bmi.getWeight();
+		String height = bmi.getHeight();
+		int bmi1 = Integer.parseInt(weight)/Integer.parseInt(height)/Integer.parseInt(height);
+		request.setAttribute("bmi1", bmi1);
+		return "view";
+	}
+}

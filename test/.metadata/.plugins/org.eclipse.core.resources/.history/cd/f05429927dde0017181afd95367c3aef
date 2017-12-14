@@ -1,0 +1,22 @@
+package annotation;
+
+public class School {
+	private Waiter wt;
+	
+	public School() {
+		System.out.println("School()");
+	}
+
+	public School(Waiter wt) {
+		System.out.println("School(wt)");
+		this.wt = wt;
+	}
+
+	@Override
+	public String toString() {
+		return "School [wt=" + wt + "]";
+	}
+	
+	
+	
+}

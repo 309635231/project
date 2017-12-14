@@ -1,0 +1,13 @@
+package annotation;
+
+import org.springframework.stereotype.Component;
+
+@Component("sb1")
+//×é¼þ
+public class SomeBean {
+
+	public SomeBean() {
+		System.out.println("SomeBean");
+	}
+	
+}

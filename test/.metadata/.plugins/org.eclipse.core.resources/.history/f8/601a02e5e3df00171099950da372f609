@@ -1,0 +1,5 @@
+package com.tarena.netctoss.dao;
+
+public interface AdminDAO {
+	public Admin findByUsername(String username);
+}

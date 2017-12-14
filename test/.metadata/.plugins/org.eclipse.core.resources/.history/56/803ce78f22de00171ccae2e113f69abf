@@ -1,0 +1,12 @@
+package ioc2;
+
+public class A {
+
+	public A() {
+		System.out.println("A()");
+	}
+	
+	public void execute(){
+		System.out.println("execute()");
+	}
+}

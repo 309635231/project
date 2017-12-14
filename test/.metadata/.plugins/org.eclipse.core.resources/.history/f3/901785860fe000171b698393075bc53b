@@ -1,0 +1,36 @@
+package test;
+
+
+import java.sql.SQLException;
+
+import javax.sql.DataSource;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import dao.AdminDAO;
+import entity.Admin;
+
+
+public class TestCase {
+	private ApplicationContext ac;
+	@Before
+	public void Init(){
+		ac = new ClassPathXmlApplicationContext("springmvc.xml");
+	}
+	@Test
+	public void test1() throws SQLException{
+
+		DataSource ds=ac.getBean("ds",DataSource.class);
+		System.out.println(ds.getConnection());
+	}
+	
+	@Test
+	public void test2(){
+		AdminDAO dao=ac.getBean("adminDAO",AdminDAO.class);
+		Admin admin=dao.findByUsername("123");
+		System.out.println(admin);
+	}
+}

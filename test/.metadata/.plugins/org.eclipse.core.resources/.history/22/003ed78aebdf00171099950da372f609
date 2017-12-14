@@ -1,0 +1,10 @@
+package dao;
+
+import org.springframework.stereotype.Repository;
+
+import entity.Admin;
+
+@Repository("adminDAO")
+public interface AdminDAO {
+	public Admin findByUsername(String username);
+}

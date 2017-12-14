@@ -1,0 +1,21 @@
+package service;
+
+import org.springframework.stereotype.Service;
+
+import dao.AdminDAO;
+import entity.Admin;
+
+@Service("loginService")
+public class LoginServiceImpl implements LoginService{
+	
+	private AdminDAO dao;
+	public Admin checkLogin(String username,String pwd){
+		Admin admin = null;
+		admin = dao.findByUsername(username);
+		if(admin==null){
+			
+		}
+		return admin;
+	}
+
+}

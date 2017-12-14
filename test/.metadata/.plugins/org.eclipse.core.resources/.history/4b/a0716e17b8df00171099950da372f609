@@ -1,0 +1,14 @@
+package demo;
+
+import java.util.Scanner;
+
+
+public class Demo1 {
+	public static void main(String[] args) throws Exception{
+		Scanner in = new Scanner(System.in);
+		System.out.print(" ‰»Î¿‡√˚");
+		String className=in.nextLine();
+		Class cls = Class.forName(className);
+		System.out.println(cls);
+	}
+}

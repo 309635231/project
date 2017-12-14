@@ -1,0 +1,29 @@
+package controller;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import service.LoginService;
+
+@Controller
+public class LoginController {
+	@Resource(name="loginService")
+	private LoginService service;
+	@RequestMapping("/toLogin.do")
+	public String toLogin(){
+		System.out.println("toLogin.()");
+		return "login";
+	}
+	
+	@RequestMapping("/login.do")
+	public String login(HttpServletRequest request){
+		System.out.println("login()");
+		String username=request.getParameter("username");
+		String pwd=request.getParameter("pwd");
+		System.out.println(username + "  " + pwd);
+		return "redirect:toIndex.do";
+	}
+}

@@ -1,0 +1,21 @@
+package test;
+
+
+import java.sql.SQLException;
+
+import javax.sql.DataSource;
+
+import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.sun.accessibility.internal.resources.accessibility;
+
+public class TestCase {
+	@Test
+	public void test1() throws SQLException{
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("springmvc.xml");
+		DataSource ds=ctx.getBean("ds",DataSource.class);
+		System.out.println(ds.getConnection());
+	}
+}

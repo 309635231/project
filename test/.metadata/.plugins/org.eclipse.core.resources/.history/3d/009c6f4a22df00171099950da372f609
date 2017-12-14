@@ -1,0 +1,28 @@
+package controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class HelloController {
+	@RequestMapping("/hello.do")
+	public String hello(){
+		System.out.println("hello()");
+		return "hello";
+	}
+	
+	@RequestMapping("/toLogin.do")
+	public String toLogin(){
+		System.out.println("toLogin()");
+		return "login";
+	}
+	
+	@RequestMapping("/login.do")
+	public String login1(HttpServletRequest request){
+		System.out.println("login1()");
+		String usernameString=request.getParameter("username");
+		return "index";
+	}
+}

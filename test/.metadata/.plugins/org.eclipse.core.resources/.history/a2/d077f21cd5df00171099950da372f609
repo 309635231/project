@@ -1,0 +1,28 @@
+package demo;
+
+import java.io.InputStream;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.dom4j.io.SAXReader;
+
+public class ApplicationContext {
+	//缓存Spring容器的Bean对象
+	private Map<String, Object> beans=new HashMap<String, Object>();
+	//利用配置文件初始化当前容器
+	//利用xml配置文件，初始化全部的Bean对象
+	public ApplicationContext(String xml){
+		//利用DOM4j读取xml文件
+		//解析xml文件内容，得到Bean的类名和Bean的ID
+		//根据类名动态加载类并且创建对象
+		//将对象和对应的ID添加到map中
+		InputStream in=getClass().getClassLoader().getResourceAsStream(xml);//读Resources(classpath)读取流
+		SAXReader reader=new SAXReader();//高级流,前期要打开一个低级流
+		
+	}
+	
+	public Object getBean(String id){
+		//根据id在map查找对象，并返回对象
+		return null;
+	}
+}

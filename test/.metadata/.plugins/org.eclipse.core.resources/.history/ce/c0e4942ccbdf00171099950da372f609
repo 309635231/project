@@ -1,0 +1,13 @@
+package demo;
+
+import org.junit.Test;
+
+public class TestCase {
+	@Test
+	public void hello(){
+		System.out.println("Hello");
+	}
+	public void helloKitty(){
+		System.out.println("Hello Kitty");
+	}
+}

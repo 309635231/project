@@ -1,0 +1,21 @@
+package dao;
+
+import java.sql.Connection;
+
+import javax.activation.DataSource;
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Repository;
+
+import entity.Admin;
+
+@Repository("adminDAO")
+public class AdminDAOJdbcImpl implements AdminDAO{
+	@Resource(name="ds")
+	private DataSource ds;
+	public Admin findByUsername(String username){
+		Admin admin = null;
+		Connection connection=null;
+		return admin;
+	}
+}
